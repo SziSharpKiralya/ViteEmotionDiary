@@ -1,0 +1,22 @@
+/*Error26*/
+/*Made by Marcell Csengeri*/
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    width: 64px;
+    height: 64px;
+    color: white;
+    background: conic-gradient(
+    black 0% 25%, fuchsia 25% 50%,
+    black 50% 75%, fuchsia 75% 100%
+  );
+}
+
+body {
+    display: block;
+    width: 100vw;
+    min-height: 100vh;
+    background: white;
+}
