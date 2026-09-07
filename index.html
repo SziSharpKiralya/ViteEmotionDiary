@@ -7,7 +7,23 @@
     <title>Vite Emotion Diary</title>
   </head>
   <body>
-    <div class="main"></div>
+    <div class="main">
+      <form id="diary_form">
+        <label for="emotion_status">How did you feel today?</label><br />
+        <select id="emotion_status">
+          <option value="e5">😀</option>
+          <option value="e4">😐</option>
+          <option value="e3">😢</option>
+          <option value="e2">😴</option>
+          <option value="e1">😡</option>
+        </select><br />
+
+        <label for="context_status">Could you elaborate?</label><br />
+        <input type="text" id="context_status" name="context_status" /><br />
+
+        <button type="submit">Save to database 💾</button>
+      </form>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
