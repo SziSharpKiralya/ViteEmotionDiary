@@ -1,0 +1,214 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: #f4f6f8;
+    color: #222;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigáció */
+nav {
+    width: 100%;
+    padding: 18px 30px;
+
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    background: #ffffff;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: #4f7cff;
+}
+
+/* Középső tartalom */
+.main {
+    width: 100%;
+    max-width: 600px;
+
+    margin-top: 80px;
+    padding: 35px;
+
+    background: white;
+    border-radius: 18px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Form */
+#diary_form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    margin-top: 8px;
+
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+select,
+input {
+    width: 100%;
+    padding: 13px 15px;
+
+    border: 1px solid #d8dce1;
+    border-radius: 10px;
+
+    background: #fafbfc;
+    color: #222;
+
+    font-size: 16px;
+    outline: none;
+
+    transition: 0.2s;
+}
+
+select:focus,
+input:focus {
+    border-color: #4f7cff;
+    box-shadow: 0 0 0 3px rgba(79, 124, 255, 0.15);
+}
+
+select {
+    cursor: pointer;
+}
+
+/* Gomb */
+button {
+    margin-top: 15px;
+    padding: 13px 18px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #4f7cff;
+    color: white;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #416be0;
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Telefon */
+@media (max-width: 650px) {
+    .main {
+        width: calc(100% - 30px);
+        margin-top: 40px;
+        padding: 25px;
+    }
+
+    nav {
+        padding: 16px;
+    }
+}
+
+.main {
+    width: 100%;
+    max-width: 900px;
+    height: 500px;
+
+    margin-top: 60px;
+    padding: 25px;
+
+    background: white;
+    border-radius: 18px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    overflow: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+}
+
+thead {
+    position: sticky;
+    top: 0;
+
+    background: #4f7cff;
+    color: white;
+
+    z-index: 1;
+}
+
+th,
+td {
+    padding: 14px 16px;
+
+    text-align: left;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+th {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+td {
+    font-size: 14px;
+}
+
+tbody tr {
+    transition: 0.2s;
+}
+
+tbody tr:hover {
+    background: #f4f6f8;
+}
+
+/* Gombok a táblázatban */
+table button {
+    margin: 0;
+    padding: 8px 12px;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 13px;
+    cursor: pointer;
+}
+
+@media (max-width: 950px) {
+    .main {
+        width: calc(100% - 30px);
+        height: 450px;
+
+        margin-top: 40px;
+    }
+}

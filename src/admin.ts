@@ -1,5 +1,5 @@
 import "./style.css";
-import type { Emotions } from "./Emotions";
+import type { ListedEmotions } from "./Emotions";
 
 const API_URL = "https://retoolapi.dev/xJiRs2/data";
 
@@ -8,7 +8,7 @@ async function loadEmotions() {
   if (!response.ok) {
     throw new Error("Invalid response");
   }
-  const data = (await response.json()) as Emotions[];
+  const data = (await response.json()) as ListedEmotions[];
 
   const tableContent = document.getElementById("table_content");
   tableContent!.textContent = "";
@@ -31,9 +31,21 @@ async function loadEmotions() {
     const tdDelete = document.createElement("td");
     const delButton = document.createElement("button");
     delButton.textContent = "❌";
-
     tdDelete.append(delButton);
     tr.appendChild(tdDelete);
+
+    delButton.addEventListener('click', async () => {
+      await fetch(`${API_URL}/${i.id}`, {
+        method: 'DELETE'
+      });
+      loadEmotions();
+    });
+
+    const tdEdit = document.createElement("td");
+    const editButton = document.createElement("button");
+    editButton.textContent = "🛠️";
+    tdEdit.append(editButton);
+    tr.appendChild(tdEdit);
 
     tableContent?.appendChild(tr);
   }
