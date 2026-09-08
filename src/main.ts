@@ -1,6 +1,6 @@
 import "./style.css";
 //import "./error26.css"
-import type { Emotions, NewEmotions } from "./Emotions";
+import type { Emotions } from "./Emotions";
 
 const API_URL = "https://retoolapi.dev/xJiRs2/data";
 
@@ -14,7 +14,7 @@ async function addEmotion(e: SubmitEvent) {
   const diaryForm = document.getElementById('diary_form') as HTMLFormElement;
   const data = new FormData(diaryForm);
 
-  const newData: NewEmotions = {
+  const newData: Emotions = {
     Date: new Date().toISOString().slice(0, 10),
     Context: data.get("context_status")!.toString(),
     Emotion: data.get("emotion_status")!.toString()
