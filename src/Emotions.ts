@@ -4,3 +4,9 @@ export interface Emotions {
   context: string
   emotion: string
 }
+
+export interface NewEmotions {
+  Date: string
+  Context: string
+  Emotion: string
+}
